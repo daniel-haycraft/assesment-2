@@ -30,13 +30,15 @@ const cart = [
     {
         name: 'salad', 
         price: 7.99
-    }
+   }
 ]
 
 //CODE HERE
+ const summedPrice = cart.reduce((a, c) => {
+    return a + c.price
+ },0)
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+ console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,7 +56,10 @@ const cart = [
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal, couponValue, tax){
+    const bigMath = couponValue - (cartTotal * tax)
+    return bigMath
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,6 +85,14 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+price = we need to know how much they owe us
+item = we need to know what to get them 
+tax = ohhhh taxes 
+name = we want to great good repor with our customers aka: first name basis lol
+
+
+
+
 */
 
 /*
@@ -88,3 +101,12 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    item: 'chicken sandy',
+    name: 'Danny',
+    price: 5,
+    tax: 1.08, 
+}
+
+
+

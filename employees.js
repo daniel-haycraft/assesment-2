@@ -20,6 +20,16 @@
 */
 
 //CODE HERE
+class Employee {
+    constructor(name, shifts){
+        this.name = name;
+        this.shifts = shifts;  
+    }
+    getSchedule() {
+        return `${this.name} works on ${this.shifts}`
+    }
+} 
+
 
 
 
@@ -34,14 +44,26 @@
 */
 
 //CODE HERE
+const empOne = new Employee('Jess', 'Weekday mornings and Weekday AfterNoons')
 
 /*
     Call the `getSchedule` method on the
     `empOne` object.
+
 */
-
+//THIS IS CONFUSING, ALL CAPS CAUSE ITS DIFFERENT LOL
+//CALLING GETSCHEDULE MAKING ME THINK IM SUPPOSED TO CONSOLE.LOG IT 
+//BUT NO IM JUST SUPPOSED TO CONSOLE.LOG THE EMPONE BECUASE WE MADE A NEW EMPONE
+// IF IM WRONG PLZ EXPLAIN WHY :)
+// THANK YOU
+// I GUESS IT MAKES MORE SENSE THE MORE I READ IT LOLLL
+// the more i read it the better i understand
+// the reason why i was wrong ^^
+// emp is the thing i am calling but i also ahve to access the method of get schedule.
+// if i just call empone ill get the full array, i don't want that...
+// i specifically want jess's schedule
 //CODE HERE
-
+// console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object
@@ -56,7 +78,9 @@
 */
 
 //CODE HERE
-
+empOne.name = 'Nick'
+const empTwo = empOne
+console.log(empTwo.getSchedule())
 
 
 //////////////////PROBLEM 2////////////////////
