@@ -31,7 +31,15 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: 'extra pep',
+    price: 6,
+    category: 'Gluten-free',
+    popularity: 10,
+    rating: 10,
+    tags: ['yum', 'best', 'pizza'],
 
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +51,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,8 +61,8 @@
 */
 
 //CODE HERE
-
-
+console.log(pizza.tags)
+console.log(pizza['tags'])
 /*
     Third, destructure the price off of the
     pizza object.
@@ -63,7 +71,7 @@
 */
 
 //CODE HERE
-
+const { price: pizzaPrice, category: pizzaCategory } = pizza
 
 /*
     Fourth, and last, destructure the category
@@ -73,8 +81,10 @@
 */
 
 //CODE HERE
-
-
+console.log(pizzaCategory)
+console.log(pizzaPrice)
+// i named them specifically because just price is very unspecific and i don't want to word clash
+// also its easy to remember
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -88,8 +98,40 @@
 */
 
 //CODE HERE
-
-
+const foodArr = [
+    {
+    name: 'pasta',
+    price: 10,
+    category: 'gluten free entree',
+    popularity: 7,
+    rating: 11,
+    tags: ['chicken', 'creamy pesto swauce', 'low-cal']
+    },
+    {
+    name: 'soup',
+    price: 5,
+    category: 'appetizer',
+    tags: ['yum', 'low-cal']
+    },
+    {
+    name: 'chicken tenders',
+    price: 7,
+    category: 'appetizer',
+    tags: ['chicken', 'delish']
+    },
+    {
+        name: 'baby nachos',
+        price: 3,
+        category: 'kids food',
+        tags: ['kids']
+    },
+    {
+        name: 'refried ice cream',
+        price: 8,
+        category: 'desert',
+        tags: ['yum', 'delish']
+    }
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -104,10 +146,10 @@
 */
 
 //CODE HERE
-
+const foodYum = foodArr.filter(yum => yum.tags.includes('chicken'))
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-
+console.log(foodYum)
 
 //////////////////PROBLEM 5////////////////////
 /* 
