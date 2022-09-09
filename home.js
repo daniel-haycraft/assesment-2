@@ -124,7 +124,6 @@ const deals = [
 ]
 
 
-
 /*
     The owner has decided to take the 15% off
     deal down to 10%.
@@ -135,8 +134,6 @@ const deals = [
 */
 
 //CODE HERE
-
-
 
 /*
     The restaurant is going to continue its
