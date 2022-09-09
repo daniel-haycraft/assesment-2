@@ -34,11 +34,11 @@ const cart = [
 ]
 
 //CODE HERE
- const summedPrice = cart.reduce((a, c) => {
-    return a + c.price
- },0)
-
- console.log(summedPrice)
+//  const summedPrice = cart.reduce((a, c) => {
+//     return a + c.price
+//  },0)
+ const summedPrice = cart.reduce((a, c) => a  + c.price, 0)
+console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
 /*  

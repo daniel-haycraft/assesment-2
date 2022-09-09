@@ -63,7 +63,7 @@ const empOne = new Employee('Jess', 'Weekday mornings and Weekday AfterNoons')
 // if i just call empone ill get the full array, i don't want that...
 // i specifically want jess's schedule
 //CODE HERE
-// console.log(empOne.getSchedule())
+console.log(empOne.getSchedule())
 
 /*
     Make a copy of the empOne object
@@ -78,8 +78,8 @@ const empOne = new Employee('Jess', 'Weekday mornings and Weekday AfterNoons')
 */
 
 //CODE HERE
-empOne.name = 'Nick'
-const empTwo = empOne
+let empTwo = empOne
+empTwo.name = 'Nick'
 console.log(empTwo.getSchedule())
 
 
@@ -107,8 +107,23 @@ console.log(empTwo.getSchedule())
 */
 
 //CODE HERE
+class Manager extends Employee{
+    constructor(name, shifts, empsArr){
+        super(name, shifts)
+        this.empsArr = empsArr
+    }
+    getEmployees(){
+        return `${this.name} manages ${this.empsArr}`
+    } 
+    addEmployee(emp){
+    }
+}
 
 
+
+
+/**
+ 
 
 /*
     Create a new instance of your class.
@@ -122,12 +137,12 @@ console.log(empTwo.getSchedule())
 */
 
 //CODE HERE
-
-
+const manager = new Manager('Winston', 'WeekDay morns, weekday afters', 'Cece and Schmidt')
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
+console.log(manager.getEmployees())
 
 //CODE HERE
 
@@ -138,7 +153,8 @@ console.log(empTwo.getSchedule())
 */
 
 //CODE HERE 
-
+console.log(manager.addEmployee('coach'))
+console.log(manager.addEmployee('cshhh'))
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
@@ -146,3 +162,4 @@ console.log(empTwo.getSchedule())
 */
 
 //CODE HERE
+console.log(manager.getEmployees())
