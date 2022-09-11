@@ -30,7 +30,17 @@
 */
 
 //CODE HERE
-
+class Ticket {
+    constructor(items, orderTimes, customerId){
+        this.status = 'queued'
+        this.items = items
+        this.orderTimes = orderTimes
+        this.customerId = customerId
+    }
+    updateStatus(newStatus){
+        return `the ${this.items} for customer ${this.customerId} is now ${newStatus} at ${this.orderTimes}`
+    }
+}
 
 
 /*
@@ -45,7 +55,7 @@
 */
 
 //CODE HERE
-
+const firstTicket = new Ticket([' chicken', ' ravioli', ' pasta'], 703, 575)
 
 /*
     Call the `updateStatus` method on
@@ -54,3 +64,4 @@
 */
 
 //CODE HERE
+console.log(firstTicket.updateStatus('cooking'))

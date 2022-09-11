@@ -51,7 +51,7 @@ const pizza = {
 */
 
 //CODE HERE
-console.log(pizza.popularity)
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -61,8 +61,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-console.log(pizza.tags)
-console.log(pizza['tags'])
+// console.log(pizza.tags)
+// console.log(pizza['tags'])
 /*
     Third, destructure the price off of the
     pizza object.
@@ -81,8 +81,8 @@ const { price: pizzaPrice, category: pizzaCategory } = pizza
 */
 
 //CODE HERE
-console.log(pizzaCategory)
-console.log(pizzaPrice)
+// console.log(pizzaCategory)
+// console.log(pizzaPrice)
 // i named them specifically because just price is very unspecific and i don't want to word clash
 // also its easy to remember
 //////////////////PROBLEM 3////////////////////
@@ -111,24 +111,28 @@ const foodArr = [
     name: 'soup',
     price: 5,
     category: 'appetizer',
+    rating: 1,
     tags: ['yum', 'low-cal']
     },
     {
     name: 'chicken tenders',
     price: 7,
     category: 'appetizer',
+    rating: 15,
     tags: ['chicken', 'delish']
     },
     {
         name: 'baby nachos',
         price: 3,
         category: 'kids food',
+        rating: 10,
         tags: ['kids']
     },
     {
         name: 'refried ice cream',
         price: 8,
         category: 'desert',
+        rating: 4,
         tags: ['yum', 'delish']
     }
 ]
@@ -146,10 +150,10 @@ const foodArr = [
 */
 
 //CODE HERE
-const foodYum = foodArr.filter(yum => yum.tags.includes('chicken'))
+const filteredFood = foodArr.filter(yum => yum.tags.includes('chicken'))
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-console.log(foodYum)
+
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -178,26 +182,34 @@ console.log(foodYum)
     a filtered array
 
     Use the filter method to filter the foodArr
-
+// non sense
         In the callback, check if the `type` is `above`, 
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
-
+// no non sense
+// check to see if type === above
+// return the objects that were above
+// 
         If the type isn't `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
-    
+// if the type isn't below, return objects that are below
+
     Return the filtered array from the entire function
 */
 
 //CODE HERE
+function filterByProperty(property, number, type){
+    const filteredArr = foodArr.filter(function(){
+        
+    })
 
 
-/*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
+}
+//     Invoke the `filterByProperty` function passing
+//     in a value for each paramter.
 
-    You'll have to console.log to see the filtered array
-*/
+//     You'll have to console.log to see the filtered array
+// */
 
 //CODE HERE
