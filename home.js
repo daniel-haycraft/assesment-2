@@ -134,7 +134,19 @@ const deals = [
 */
 
 //CODE HERE
+const newDeals = deals.map(obj => {
+    if (obj.title === '15% Off!') {
+      return {...obj, title: '10% Off!'};
+    }
+  
+    return obj;
+  });
+  
+ 
 
+  // so using map is the replace method. 
+  // if i do the obj of the exact property in the array and make it a true of false statement\
+  // i then could return in { becuase its editing the arry of objs} while using ...the specific variable, title: ''
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -149,3 +161,13 @@ const deals = [
 */
 
 //CODE HERE
+const aprilDeals = newDeals.map(deal => {
+    if (deal.desc.includes('March')) {
+        return  { ...deal, desc: deal.desc.trim('   This deal lasts until the end of April!   ') }
+    }
+    return deal
+})
+
+
+
+console.log(aprilDeals)
