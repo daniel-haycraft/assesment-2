@@ -197,15 +197,22 @@ const filteredFood = foodArr.filter(yum => yum.tags.includes('chicken'))
 
     Return the filtered array from the entire function
 */
-
+// `property`, 
+//     `number`, and `type. 
 //CODE HERE
 function filterByProperty(property, number, type){
-    const filteredArr = foodArr.filter(function(){
-        
+    const filteredArr = foodArr.filter(el => {
+        let passer = 'below'
+            if (el.foodArr === type){
+            return property
+                } else if (el.foodArr != passer) {
+                    return number
+        }
+        return filteredArr
     })
-
-
 }
+console.log(filtfilterByProperty('rating', 5, 'above'))
+
 //     Invoke the `filterByProperty` function passing
 //     in a value for each paramter.
 
