@@ -186,14 +186,10 @@ const filteredFood = foodArr.filter(yum => yum.tags.includes('chicken'))
         In the callback, check if the `type` is `above`, 
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
-// no non sense
-// check to see if type === above
-// return the objects that were above
-// 
         If the type isn't `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
-// if the type isn't below, return objects that are below
+        // if the type isn't below, return objects that are below
 
     Return the filtered array from the entire function
 */
@@ -201,17 +197,15 @@ const filteredFood = foodArr.filter(yum => yum.tags.includes('chicken'))
 //     `number`, and `type. 
 //CODE HERE
 function filterByProperty(property, number, type){
-    const filteredArr = foodArr.filter(el => {
-        let passer = 'below'
-            if (el.foodArr === type){
-            return property
-                } else if (el.foodArr != passer) {
-                    return number
-        }
-        return filteredArr
+    const filteredArr = foodArr.filter(function(el){
+        if (el.length === 'above' ){
+            return property > number
+        } else if (type != 'below'){
+            return (property > number)
+    }
+    return filteredArr
     })
 }
-console.log(filtfilterByProperty('rating', 5, 'above'))
 
 //     Invoke the `filterByProperty` function passing
 //     in a value for each paramter.
@@ -220,3 +214,6 @@ console.log(filtfilterByProperty('rating', 5, 'above'))
 // */
 
 //CODE HERE
+console.log(filterByProperty('rating', 5, 'above'))
+
+// :/
